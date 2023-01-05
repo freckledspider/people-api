@@ -69,4 +69,12 @@ app.delete("/people/:id", async (req, res) => {
     }
 })
 
+app.get("/people/:id", async (req, res) => {
+    try {
+        res.json(await People.findById(req.params.id))
+    } catch(error) {
+        res.status(400).json(error)
+    }
+})
+
 app.listen(PORT, () => console.log(`listening on PORT ${PORT}`))

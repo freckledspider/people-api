@@ -1,1 +1,1 @@
-# GA SEI Coursework
+# GA SEI Coursework - People API
